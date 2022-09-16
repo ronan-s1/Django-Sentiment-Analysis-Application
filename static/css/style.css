@@ -8,19 +8,29 @@ body{
     margin-top: 30px;
 }
 
+@media screen and (max-width: 700px){
+    .box{
+        width: 80%;
+    }
+}
+
 .btn{
     margin-top: 20px;
     width: 75px;
 }
 
 .display{
-    margin-top: 40px;
+    padding-top: 40px;
     text-align: center;
+    width: 90%;
+    margin: auto;
 }
 
 .title{
-    margin-top: 60px;
+    padding-top: 60px;
     text-align: center;
+    width: 90%;
+    margin: auto;
 }
 
 .result{

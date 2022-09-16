@@ -12,11 +12,10 @@
 <body>
     <div class="title">
         <h1>Sentiment Analyiser</h1>
-        <p>Analysis text and tells the sentiment of it on a 1 - 5, from Very Bad to Very Good </p>
+        <p>Analysis text and tells the sentiment of it on a 1 - 5 scale, from Very Bad to Very Good </p>
     </div>
-    
 
-    <form action="/result/" method="post">
+    <form action="/result/" method="POST">
         {% csrf_token %}
 
         <textarea placeholder="Ex: The food was great!" maxlength="200" class="box form-control" name="param"></textarea>
@@ -28,9 +27,7 @@
         <div class="display">
             <h4>{{sentence}}<span class="result">{{result}}</span></h4>
         </div>
-    
     </form>
-
 
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
