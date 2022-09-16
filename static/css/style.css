@@ -6,6 +6,7 @@ body{
     width: 50%;
     margin: auto;
     margin-top: 30px;
+    margin-bottom: 20px;
 }
 
 @media screen and (max-width: 700px){
@@ -14,13 +15,17 @@ body{
     }
 }
 
-.btn{
-    margin-top: 20px;
-    width: 75px;
+#submit-button{
+    width: 105px;
+
 }
 
-.display{
-    padding-top: 40px;
+.spinner-border{
+    margin-right: 2px;
+}
+
+#display{
+    padding-top: 20px;
     text-align: center;
     width: 90%;
     margin: auto;

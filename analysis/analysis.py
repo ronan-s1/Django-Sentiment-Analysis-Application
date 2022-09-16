@@ -9,7 +9,7 @@ def calculating(sample):
     
     sample = str(sample)
     
-    if len(sample) <= LIMIT:
+    if len(sample) < LIMIT:
         return "Invalid!"
     
     tokenizer = AutoTokenizer.from_pretrained("nlptown/bert-base-multilingual-uncased-sentiment")
