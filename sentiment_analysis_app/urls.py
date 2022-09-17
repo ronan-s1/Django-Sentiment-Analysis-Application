@@ -21,4 +21,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.index),
     url(r'^result/$', views.result),
+    url(r'^yelp/$', views.yelp),
 ]

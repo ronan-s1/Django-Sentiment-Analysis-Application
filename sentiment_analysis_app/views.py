@@ -1,14 +1,16 @@
-import imp
 from django.shortcuts import render
-# from django.http import HttpResponse
-# from subprocess import run, PIPE
-from analysis import analysis
+from . import utils
+
 
 def index(request):
     return render(request, "index.html")
 
 def result(request): 
     user_input = request.POST.get("param")
-    result = analysis.calculating(user_input)
+    result = utils.calculating(str(user_input))
     sentence = "The sentiment is "
     return render(request, "index.html",{"result": result, "sentence": sentence})
+
+def yelp(request):
+    uri = utils.yelp()
+    return render(request, "yelp.html", {"chart": uri})
