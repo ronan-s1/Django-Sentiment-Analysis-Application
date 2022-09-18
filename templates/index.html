@@ -16,13 +16,13 @@
         <p>Analysis text and tells the sentiment of it on a 1 - 5 scale, from Very Bad to Very Good </p>
     </div>
 
-    <form action="/result/" method="POST" id="text-form">
+    <form action="/" method="POST" id="text-form">
         {% csrf_token %}
 
         <textarea placeholder="Ex: The food was great!" maxlength="200" class="box form-control" name="param"></textarea>
         
         <div class="d-flex justify-content-center">
-            <button type="submit" id="submit-button" class="btn btn-outline-success" onclick="load()">Go !</button>
+            <button type="submit" id="submit-button" name="submit-button" class="btn btn-outline-success" onclick="load()">Go !</button>
         </div>
 
         <div class="d-flex justify-content-center" id="load">
