@@ -7,9 +7,10 @@ from bs4 import BeautifulSoup
 import numpy as np
 import pandas as pd
 import re
-import matplotlib.pyplot as plt
 import io
 import urllib, base64
+import matplotlib
+import matplotlib.pyplot as plt
 
 #constants
 LIMIT = 3
@@ -48,8 +49,9 @@ def yelp():
 
     #seeing how many reviews have each score of sentiment
     sentiment_amount = [df["sentiment"].loc[df["sentiment"] == SENTIMENTS[i]].size for i in range(len(SENTIMENTS))]
-
-    #plotting graph
+    
+    #plotting graph, using AGG to allow running outside main thread
+    matplotlib.use("Agg")
     plt.bar(["Very Bad","Bad","Meh","Good","Very Good"], sentiment_amount, color=("green"))
     plt.title("Sentiment Amounts")
     plt.xlabel("Sentiment levels")
@@ -65,4 +67,4 @@ def yelp():
     #converting 64 bit code into image
     string = base64.b64encode(buf.read())
     uri =  urllib.parse.quote(string)
-    return uri
+    return [uri, df]

@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from . import utils
+# from . import utils
+from .analysis import analysis as a
 
 
 def index(request):
@@ -7,10 +8,13 @@ def index(request):
 
 def result(request): 
     user_input = request.POST.get("param")
-    result = utils.calculating(str(user_input))
+    result = a.calculating(str(user_input))
     sentence = "The sentiment is "
     return render(request, "index.html",{"result": result, "sentence": sentence})
 
 def yelp(request):
-    uri = utils.yelp()
-    return render(request, "yelp.html", {"chart": uri})
+    chart_df = a.yelp()
+    chart, df = chart_df
+    print(df)
+    
+    return render(request, "yelp.html", {"chart": chart})
