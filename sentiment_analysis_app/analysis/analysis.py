@@ -11,6 +11,7 @@ import io
 import urllib, base64
 import matplotlib
 import matplotlib.pyplot as plt
+from matplotlib.pyplot import figure
 
 #constants
 LIMIT = 3
@@ -53,9 +54,9 @@ def yelp():
     #plotting graph, using AGG to allow running outside main thread
     matplotlib.use("Agg")
     plt.bar(["Very Bad","Bad","Meh","Good","Very Good"], sentiment_amount, color=("green"))
-    plt.title("Sentiment Amounts")
+    plt.title("Reviews")
     plt.xlabel("Sentiment levels")
-    plt.ylabel("Sentiment Amount")
+    plt.ylabel("Reviews")
     plt.tight_layout()
     fig = plt.gcf()
     

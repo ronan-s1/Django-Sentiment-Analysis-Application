@@ -2,10 +2,14 @@ body{
     background-color: rgb(244, 244, 244);
 }
 
+/* nav{
+    background-color: white;
+} */
+
 .box{
     width: 50%;
     margin: auto;
-    margin-top: 30px;
+    margin-top: 40px;
     margin-bottom: 20px;
 }
 
@@ -13,6 +17,17 @@ body{
     .box{
         width: 80%;
     }
+
+    .error{
+        width: 80%;
+    }
+}
+
+.error{
+    width: 50%;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 
 #submit-button{
@@ -32,7 +47,7 @@ body{
 }
 
 .title{
-    padding-top: 60px;
+    padding-top: 100px;
     text-align: center;
     width: 90%;
     margin: auto;
@@ -42,3 +57,4 @@ body{
     font-size: 42px;
     padding-left: 2px;
 }
+
