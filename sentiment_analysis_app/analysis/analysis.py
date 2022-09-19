@@ -14,16 +14,12 @@ import matplotlib.pyplot as plt
 from matplotlib.pyplot import figure
 
 #constants
-LIMIT = 3
 SENTIMENTS = ["Very Bad☹️","Bad🙁","Meh😐","Good🙂","Very Good😃"]
 TOKENIZER = AutoTokenizer.from_pretrained("nlptown/bert-base-multilingual-uncased-sentiment")
 MODEL = AutoModelForSequenceClassification.from_pretrained("nlptown/bert-base-multilingual-uncased-sentiment")
 
 #calculating sentiment
 def calculating(sample):
-    #minimum charcter limit BERT
-    if len(sample) < LIMIT:
-        return "Invalid!"
     
     #initiating model
     tokens = TOKENIZER.encode(sample, return_tensors="pt")
@@ -36,9 +32,9 @@ def calculating(sample):
             return SENTIMENTS[count]
 
 #getting sentiment of yelp reviews
-def yelp():
+def yelp(url):
     #scrapping and cleaning text from yelp page
-    page = requests.get("https://www.yelp.com/biz/social-brew-cafe-pyrmont")
+    page = requests.get(url)
     soup = BeautifulSoup(page.text, "html.parser")
     regex = re.compile(".*comment.*")
     results = soup.find_all("p", {"class": regex})
@@ -50,6 +46,7 @@ def yelp():
 
     #seeing how many reviews have each score of sentiment
     sentiment_amount = [df["sentiment"].loc[df["sentiment"] == SENTIMENTS[i]].size for i in range(len(SENTIMENTS))]
+    
     
     #plotting graph, using AGG to allow running outside main thread
     matplotlib.use("Agg")
@@ -68,4 +65,6 @@ def yelp():
     #converting 64 bit code into image
     string = base64.b64encode(buf.read())
     uri =  urllib.parse.quote(string)
-    return [uri, df]
+    
+    review_short = [review[:512] + "..." if len(review) > 512 else review for review in reviews]
+    return [uri, review_short, df.sentiment.values.tolist()]
