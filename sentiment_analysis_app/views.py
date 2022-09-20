@@ -29,6 +29,9 @@ def yelp(request):
         result = a.yelp(user_input)
         chart, reviews, sentiments = result
         
-        return render(request, "yelp.html", {"chart": chart, "reviews": reviews, "sentiments": sentiments})
+        if request.POST.get("table-option", "") == "on":
+            return render(request, "yelp.html", {"chart": chart, "reviews": reviews, "sentiments": sentiments, "table": " "})
+        
+        return render(request, "yelp.html", {"chart": chart, "reviews": reviews, "sentiments": sentiments, "no_table": " "})
     
     return render(request, "yelp.html")

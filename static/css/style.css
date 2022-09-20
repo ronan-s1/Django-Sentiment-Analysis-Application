@@ -3,32 +3,60 @@ body{
 }
 
 
-.box, .yelp-result{
+.box, .yelp-result, .error{
+    width: 50%;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.yelp-result{
+    margin-bottom: 80px !important;
+}
+
+.yelp-box{
     width: 50%;
     margin: auto;
     margin-top: 40px;
     margin-bottom: 20px;
 }
 
+.yelp-result-table{
+    width: 80%;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 80px;
+}
+
 @media screen and (max-width: 700px){
-    .box, .yelp-result{
+    .yelp-box .box, .yelp-result, .error{
         width: 80%;
     }
 }
 
+.nav-link:hover{
+    color: rgba(74, 147, 47, 0.744);
+    transition: 0.1s;
+}
 
 .graph-div img{
     width: 40%;
-    min-width: 300px;
 }
 
 #submit-button{
     width: 105px;
-
 }
 
 .spinner-border{
     margin-right: 2px;
+}
+
+.table-option-gap{
+    margin-bottom: 7px;
+}
+
+#table-option{
+    color:green;
 }
 
 #display{

@@ -47,6 +47,7 @@ def yelp(url):
     #seeing how many reviews have each score of sentiment
     sentiment_amount = [df["sentiment"].loc[df["sentiment"] == SENTIMENTS[i]].size for i in range(len(SENTIMENTS))]
     
+
     
     #plotting graph, using AGG to allow running outside main thread
     matplotlib.use("Agg")
@@ -67,4 +68,5 @@ def yelp(url):
     uri =  urllib.parse.quote(string)
     
     review_short = [review[:512] + "..." if len(review) > 512 else review for review in reviews]
+    
     return [uri, review_short, df.sentiment.values.tolist()]
