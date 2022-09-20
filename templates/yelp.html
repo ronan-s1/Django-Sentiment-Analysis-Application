@@ -38,47 +38,39 @@
             </button>
         </div>
 
+        
+        
+    </form>
+
+    <div class="graph-div">
         {% if chart %}
             <div class="graph d-flex justify-content-center">
                 <img src="data:image/png;base64,{{chart|safe}}">
             </div>
         {% endif %}
+    </div>
+    
+    <div class="yelp-result">
+        {% for sentiment in sentiments %}
+            {% for review in reviews %}
 
-
-        <div class="yelp-results container">
-            {% for sentiment in sentiments %}
-                {% for review in reviews %}
-                    {% comment %} {% if forloop.parentloop.counter0|divisibleby:2 %}
-                        <div class="row">
-                    {% endif %} {% endcomment %}
-
-                    {% if forloop.counter == forloop.parentloop.counter %}
-                        <div class="col">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="card-title">{{sentiment}}</h4>
-                                    <p class="card-text">{{review}}</p>
-                                </div>
+                {% if forloop.counter == forloop.parentloop.counter %}
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">{{sentiment}}</h4>
+                                <p class="card-text">{{review}}</p>
                             </div>
                         </div>
-                    {% endif %}
+                    </div>
+                    <br>
+                        
 
-                    {% comment %} {% if forloop.parentloop.counter0|divisibleby:2 %}
-                        </div>
-                    {% endif %} {% endcomment %}
-                {% endfor %}
+                {% endif %}
+
             {% endfor %}
-
-                
-        </div>
-
-        
-
-        
-
-
-    </form>
-
+        {% endfor %} 
+    </div>  
     
 
 

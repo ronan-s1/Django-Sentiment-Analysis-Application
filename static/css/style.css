@@ -2,11 +2,8 @@ body{
     background-color: rgb(244, 244, 244);
 }
 
-/* nav{
-    background-color: white;
-} */
 
-.box{
+.box, .yelp-result{
     width: 50%;
     margin: auto;
     margin-top: 40px;
@@ -14,20 +11,15 @@ body{
 }
 
 @media screen and (max-width: 700px){
-    .box{
-        width: 80%;
-    }
-
-    .error{
+    .box, .yelp-result{
         width: 80%;
     }
 }
 
-.error{
-    width: 50%;
-    margin: auto;
-    margin-top: 40px;
-    margin-bottom: 20px;
+
+.graph-div img{
+    width: 40%;
+    min-width: 300px;
 }
 
 #submit-button{
