@@ -12,37 +12,32 @@
 </head>
 <body>
     {% include "nav.html" %}
-    <div class="title">
-        <h1>Sentiment Analyiser</h1>
-        <p>Analysis text and tells the sentiment of it on a 1 - 5 scale, from Very Bad to Very Good </p>
-    </div>
     
-    {% if error %}
-        <div class="error alert alert-danger" role="alert">
-            {{error}}
+    <div class="title">
+        <h1>Sentiment Analysis Application</h1>
+        <p>See if the sentiment is very good, good, meh, bad or very bad.</p>
+    </div>
+
+    <div class="info row">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Text Analysis</h5>
+                    <p class="card-text">Analyse text you enter and see the sentiment of it.</p>
+                    <a href="/text-analysis/" class="btn btn-outline-success">check it out</a>
+                </div>
+            </div>
         </div>
-    {% endif %}
-
-    <form action="/" method="POST" id="text-form">
-        {% csrf_token %}
-
-        <textarea placeholder="Ex: The food was great!" maxlength="200" class="box form-control" name="entered"></textarea>
-        
-        <div class="d-flex justify-content-center">
-            <button type="submit" id="submit-button" name="submit-button" class="btn btn-outline-success" onclick="load()">Go !</button>
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                <h5 class="card-title">Yelp Review Analysis </h5>
+                <p class="card-text">Analyse Yelp reviews with a mathplotlib graph by entering a URL.</p>
+                <a href="/yelp/" class="btn btn-outline-success">check it out</a>
+                </div>
+            </div>
         </div>
-
-        <div class="d-flex justify-content-center" id="load">
-            <button class="btn btn-outline-success" type="button" disabled>
-                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading
-            </button>
-        </div>
-
-        <div id="display">
-            <h4>{{sentence}}<span class="result">{{result}}</span></h4>
-        </div>
-    </form>
-
+    </div>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="{% static 'scripts/script.js' %}"></script>

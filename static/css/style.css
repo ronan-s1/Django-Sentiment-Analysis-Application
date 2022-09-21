@@ -10,6 +10,12 @@ body{
     margin-bottom: 50px;
 }
 
+.info{
+    width: 70%;
+    margin: auto;
+    margin-top: 50px;
+}
+
 .yelp-result{
     margin-bottom: 80px !important;
 }
