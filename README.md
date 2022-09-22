@@ -12,9 +12,9 @@ This application calculates the sentiment of given text and yelp reviews on a 1-
 | 5 | very good|
 
 
-<div style="width: 200px">
+<!-- <div style="width: 200px"> -->
 ![image](https://user-images.githubusercontent.com/85257187/191634136-ac047c38-c06a-478d-8ff2-b1a27d8f1472.png)
-</div>
+<!-- </div> -->
 
 ## Features
 - Calculating sentiment
