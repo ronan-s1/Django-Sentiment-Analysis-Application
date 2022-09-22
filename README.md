@@ -16,6 +16,7 @@ This application calculates the sentiment of given text and yelp reviews on a 1-
 - Bar chart
 - Different forms of displaying data
 - Simple and responsive design
+- Navigation menu
 
 # Examples
 ### Even if there are words like funny and witty, the overall structure is a negative type.
