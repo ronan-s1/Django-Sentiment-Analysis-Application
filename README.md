@@ -19,7 +19,7 @@ This application calculates the sentiment of given text and yelp reviews on a 1-
 
 ## Set up
 
-(https://www.codespeedy.com/clone-and-run-a-django-project-from-github/)[Click here]
+[Click here](https://www.codespeedy.com/clone-and-run-a-django-project-from-github/) 
 
 ```
 python manage.py runserver
