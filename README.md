@@ -13,7 +13,7 @@ This application calculates the sentiment of given text and yelp reviews on a 1-
 
 
 # Examples
-Even if there are words like funny and witty, the overall structure is a negative type.
+### Even if there are words like funny and witty, the overall structure is a negative type.
 ![image](https://user-images.githubusercontent.com/85257187/191634136-ac047c38-c06a-478d-8ff2-b1a27d8f1472.png)
 
 ### Sentiments on a [yelp review](https://www.yelp.ie/biz/mudpie-beauty-cottage-dundrum)
@@ -27,7 +27,6 @@ Even if there are words like funny and witty, the overall structure is a negativ
 ![image](https://user-images.githubusercontent.com/85257187/191635107-5c1db451-6956-492d-b4a0-23a35a277539.png)
 
 
-
 ## Features
 - Calculating sentiment
 - Bar chart
@@ -36,8 +35,13 @@ Even if there are words like funny and witty, the overall structure is a negativ
 
 ## Set up
 
-[Click here](https://www.codespeedy.com/clone-and-run-a-django-project-from-github/) 
+- Follow [this](https://www.codespeedy.com/clone-and-run-a-django-project-from-github/)
+- Basically clone this and change the SECRET_KEY and install required libraries
+```
+pip install -r requirement.txt
+```
 
+- Then run this in the same folder where manage.py is and go to http://127.0.0.1:8000/
 ```
 python manage.py runserver
 ```
