@@ -35,7 +35,7 @@ This application calculates the sentiment of given text and yelp reviews on a 1-
 ## Set up
 Follow [this](https://www.codespeedy.com/clone-and-run-a-django-project-from-github/), basically clone this and change the SECRET_KEY and install required libraries
 ```
-pip install -r requirement.txt
+pip install -r requirements.txt
 ```
 Then run this in the same folder where manage.py is and go to http://127.0.0.1:8000/
 ```
