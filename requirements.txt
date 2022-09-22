@@ -1,0 +1,6 @@
+requests
+numpy
+pandas
+BeautifulSoup
+matplotlib
+torch torchvision torchaudio
