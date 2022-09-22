@@ -4,14 +4,11 @@ import requests
 import numpy as np
 import pandas as pd
 from bs4 import BeautifulSoup
-import numpy as np
-import pandas as pd
 import re
 import io
 import urllib, base64
 import matplotlib
 import matplotlib.pyplot as plt
-from matplotlib.pyplot import figure
 
 #constants
 SENTIMENTS = ["Very Bad☹️","Bad🙁","Meh😐","Good🙂","Very Good😃"]
@@ -20,7 +17,6 @@ MODEL = AutoModelForSequenceClassification.from_pretrained("nlptown/bert-base-mu
 
 #calculating sentiment
 def calculating(sample):
-    
     #initiating model
     tokens = TOKENIZER.encode(sample, return_tensors="pt")
     result = MODEL(tokens)
