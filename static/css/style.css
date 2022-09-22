@@ -24,6 +24,10 @@ body{
     margin-bottom: 80px !important;
 }
 
+.graph-div img{
+    min-width: 305px;
+}
+
 .yelp-box{
     width: 50%;
     margin: auto;
