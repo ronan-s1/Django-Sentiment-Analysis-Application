@@ -16,13 +16,14 @@ This application calculates the sentiment of given text and yelp reviews on a 1-
 Even if there are words like funny and witty, the overall structure is a negative type.
 ![image](https://user-images.githubusercontent.com/85257187/191634136-ac047c38-c06a-478d-8ff2-b1a27d8f1472.png)
 
-Normal view testing a [yelp review](https://www.yelp.ie/biz/mudpie-beauty-cottage-dundrum)
+### Sentiments on a [yelp review](https://www.yelp.ie/biz/mudpie-beauty-cottage-dundrum)
 ![image](https://user-images.githubusercontent.com/85257187/191635027-fe1a49fe-3cee-471b-b8da-4c32d4e506ea.png)
 
-More compact table view
+### More compact table view
 ![image](https://user-images.githubusercontent.com/85257187/191635090-498331ed-7962-40a8-8248-f27983e44f1c.png)
 
-Chart
+### Chart
+
 ![image](https://user-images.githubusercontent.com/85257187/191635107-5c1db451-6956-492d-b4a0-23a35a277539.png)
 
 
