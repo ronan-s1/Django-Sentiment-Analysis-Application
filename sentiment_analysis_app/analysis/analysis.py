@@ -47,8 +47,6 @@ def yelp(url):
     #seeing how many reviews have each score of sentiment
     sentiment_amount = [df["sentiment"].loc[df["sentiment"] == SENTIMENTS[i]].size for i in range(len(SENTIMENTS))]
     
-
-    
     #plotting graph, using AGG to allow running outside main thread
     matplotlib.use("Agg")
     plt.bar(["Very Bad","Bad","Meh","Good","Very Good"], sentiment_amount, color=("green"))
