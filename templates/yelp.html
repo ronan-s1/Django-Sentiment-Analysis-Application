@@ -36,7 +36,7 @@
         </div>
 
         <div class="d-flex justify-content-center">
-            <button type="submit" id="submit-button" name="yelp-submit-button" class="yelp-button btn btn-outline-success" onclick="load()">Go !</button>
+            <button type="submit" id="submit-button" name="yelp-submit-button" class="yelp-button btn btn-outline-success" onclick="yelp_load()">Go !</button>
         </div>
 
         <div class="d-flex justify-content-center" id="load">
@@ -46,7 +46,7 @@
         </div>
     </form>
 
-    <div class="graph-div">
+    <div class="graph-div" id="graph-div">
         {% if chart %}
             <div class="graph d-flex justify-content-center">
                 <img src="data:image/png;base64,{{chart|safe}}">
@@ -54,7 +54,7 @@
         {% endif %}
     </div>
     
-    <div class="yelp-result">
+    <div class="yelp-result" id="yelp-result">
         {% if no_table %}
             {% for sentiment in sentiments %}
                 {% for review in reviews %}
@@ -76,7 +76,7 @@
         {% endif %}
     </div> 
     
-    <div class="yelp-result-table">
+    <div class="yelp-result-table" id="yelp-result-table">
         {% if table %}
             <table class="bg-light table table-hover table-bordered">
                 <thead>

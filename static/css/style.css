@@ -2,12 +2,16 @@ body{
     background-color: rgb(244, 244, 244);
 }
 
-
 .box, .yelp-result, .error{
     width: 50%;
     margin: auto;
     margin-top: 40px;
     margin-bottom: 40px;
+}
+
+.navbar-toggler-icon{
+    width: 35px;
+    height: 35px;
 }
 
 .info{
@@ -83,4 +87,3 @@ body{
     font-size: 42px;
     padding-left: 2px;
 }
-
