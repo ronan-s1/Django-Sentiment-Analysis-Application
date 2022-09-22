@@ -11,6 +11,11 @@ This application calculates the sentiment of given text and yelp reviews on a 1-
 | 4 | good|
 | 5 | very good|
 
+## Features
+- Calculating sentiment
+- Bar chart
+- Different forms of displaying data
+- Simple and responsive design
 
 # Examples
 ### Even if there are words like funny and witty, the overall structure is a negative type.
@@ -27,21 +32,13 @@ This application calculates the sentiment of given text and yelp reviews on a 1-
 ![image](https://user-images.githubusercontent.com/85257187/191635107-5c1db451-6956-492d-b4a0-23a35a277539.png)
 
 
-## Features
-- Calculating sentiment
-- Bar chart
-- Different forms of displaying data
-- Simple and responsive design
-
 ## Set up
-
-- Follow [this](https://www.codespeedy.com/clone-and-run-a-django-project-from-github/)
-- Basically clone this and change the SECRET_KEY and install required libraries
+Follow [this](https://www.codespeedy.com/clone-and-run-a-django-project-from-github/)
+Basically clone this and change the SECRET_KEY and install required libraries
 ```
 pip install -r requirement.txt
 ```
-
-- Then run this in the same folder where manage.py is and go to http://127.0.0.1:8000/
+Then run this in the same folder where manage.py is and go to http://127.0.0.1:8000/
 ```
 python manage.py runserver
 ```
