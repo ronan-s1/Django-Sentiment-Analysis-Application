@@ -18,7 +18,7 @@ This application calculates the sentiment of given text and yelp reviews on a 1-
 - Simple and responsive design
 - Navigation menu
 
-# Examples
+## Examples
 ### Even if there are words like funny and witty, the overall structure is a negative type.
 ![image](https://user-images.githubusercontent.com/85257187/191634136-ac047c38-c06a-478d-8ff2-b1a27d8f1472.png)
 
