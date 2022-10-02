@@ -22,6 +22,9 @@ This application calculates the sentiment of given text and yelp reviews on a 1-
 ### Even if there are words like funny and witty, the overall structure is a negative type.
 ![image](https://user-images.githubusercontent.com/85257187/191634136-ac047c38-c06a-478d-8ff2-b1a27d8f1472.png)
 
+### Similar to the last example, even though the words enjoy and sweet are usually considered positive, the overall structure is a negative type.
+![image](https://user-images.githubusercontent.com/85257187/193474504-8ea8f7af-9799-424a-83b9-45df222677fc.png)
+
 ### Sentiments on a [yelp review](https://www.yelp.ie/biz/mudpie-beauty-cottage-dundrum)
 ![image](https://user-images.githubusercontent.com/85257187/191635027-fe1a49fe-3cee-471b-b8da-4c32d4e506ea.png)
 
