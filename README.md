@@ -13,6 +13,7 @@ This application calculates the sentiment of given text and yelp reviews on a 1-
 
 ## Features
 - Calculating sentiment
+- Calculating sentiment of Yelp reviews with a given URL
 - Bar chart
 - Different forms of displaying data
 - Simple and responsive design
