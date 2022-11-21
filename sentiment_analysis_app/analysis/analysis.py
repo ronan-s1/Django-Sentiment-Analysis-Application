@@ -52,9 +52,9 @@ def yelp(url):
     plt.tight_layout()
     fig = plt.gcf()
     
-    #converting graph into dtring buffer
+    #converting graph into dstring buffer
     buf = io.BytesIO()
-    fig.savefig(buf,format='png')
+    fig.savefig(buf,format="png")
     buf.seek(0)
     
     #converting 64 bit code into image
